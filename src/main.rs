@@ -104,7 +104,7 @@ async fn svc_auth_req(_req: Request<Body>, client: reqwest::Client) -> Result<Re
                     println!("Genereted code {}", code);
                     Response::builder()
                         .header(header::CONTENT_TYPE, "text/html")
-                        .body(Body::from(format!("<html><body><img src=\"data:image/png;base64,{}\"></body></html>", code))).unwrap()
+                        .body(Body::from(format!("<html><body><img src=\"data:image/png;base64,{}\"><a href=\"collect?orderRef={}\">Collect response</a></body></html>", code, resp.order_ref))).unwrap()
                 },
                 None => {
                     println!("Error none");
