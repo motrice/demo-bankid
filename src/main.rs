@@ -20,7 +20,7 @@ use reqwest::header;
 use std::fs::File;
 use std::io::Read;
 use std::collections::HashMap;
-use  std::borrow::Cow;
+use std::borrow::Cow;
 
 use tokio::timer::delay;
 use std::time::Duration;
