@@ -11,7 +11,7 @@ required-features = ["json"]
 [dependencies]
 pretty_env_logger = "0.3"
 reqwest = {git="https://github.com/seanmonstar/reqwest", features = ["json"]}
-tokio = "=0.2.0-alpha.6"
+tokio = "=1.8.4"
 serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1.0"
 serde_json = {version="1.0", optional = true}
